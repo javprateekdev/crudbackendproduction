@@ -4,7 +4,7 @@ import Connection from './database/db.js';
 import Routes from './routes/route.js';
 import cors from 'cors';
 import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
+
 
 const app=express();
 
@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors());
 app.use('/',Routes);
 
-dotenv.config()
+
 
 
 const USERNAME=process.env.DB_USERNAME;
